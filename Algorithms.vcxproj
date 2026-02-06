@@ -123,8 +123,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BOARDCOVER.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="moving_average.cpp" />
+    <ClCompile Include="Picnic.cpp" />
     <ClCompile Include="recurision.cpp" />
     <ClCompile Include="Boggle.cpp" />
   </ItemGroup>

@@ -50,40 +50,40 @@ bool hasWord(int y, int x, const string& word) {
     return false;
 }
 
-int main() {
-    
-    string tempBoard[5] = {
-        "URLPO",
-        "XPREA",
-        "XXRLL",
-        "XXXXO",
-        "XXXXX"
-    };
-
-    for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < 5; j++) {
-            board[i][j] = tempBoard[i][j];
-        }
-    }
-    
-    string target;
-    cin >> target;
-    bool found = false;
-
-    for (int y = 0; y < 5; ++y) {
-        for (int x = 0; x < 5; ++x) {
-            if (hasWord(y, x, target)) {
-                found = true;
-                cout << y << " " << x << "성공"<<endl;
-                
-                break;
-
-            }
-        }
-        if (found) break;
-
-    }
-    if (!found)
-        cout << "실패" << endl;
-    return 0; 
-}
+//int main() {
+//    
+//    string tempBoard[5] = {
+//        "URLPO",
+//        "XPREA",
+//        "XXRLL",
+//        "XXXXO",
+//        "XXXXX"
+//    };
+//
+//    for (int i = 0; i < 5; i++) {
+//        for (int j = 0; j < 5; j++) {
+//            board[i][j] = tempBoard[i][j];
+//        }
+//    }
+//    
+//    string target;
+//    cin >> target;
+//    bool found = false;
+//
+//    for (int y = 0; y < 5; ++y) {
+//        for (int x = 0; x < 5; ++x) {
+//            if (hasWord(y, x, target)) {
+//                found = true;
+//                cout << y << " " << x << "성공"<<endl;
+//                
+//                break;
+//
+//            }
+//        }
+//        if (found) break;
+//
+//    }
+//    if (!found)
+//        cout << "실패" << endl;
+//    return 0; 
+//}

@@ -27,5 +27,11 @@
     <ClCompile Include="Boggle.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Picnic.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BOARDCOVER.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
