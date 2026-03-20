@@ -33,5 +33,17 @@
     <ClCompile Include="BOARDCOVER.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Traveling_Sales-man_Problem.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="clocksync.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="QuadTree.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Fence.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

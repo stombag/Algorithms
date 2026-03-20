@@ -40,6 +40,7 @@ bool hasWord(int y, int x, const string& word) {
         
         // 다음 글자를 찾으러 재귀 호출
         if (hasWord(nextY, nextX, word.substr(1))) {
+            // 글자를 하나 찾을 때마다, 찾아야 할 숙제를 하나씩 줄여서 다음 타자에게 넘기는 방식
             return true;
             //return ret = 1; // 성공하면 1 저장 후 반환
         }
@@ -50,8 +51,9 @@ bool hasWord(int y, int x, const string& word) {
     return false;
 }
 
+
 //int main() {
-//    
+//    // "문자열(string) 배열은 겉보기엔 '단어들의 1차원 목록'이지만, 단어 자체가 '글자들의 배열'이라서 결국 [단어번호][글자번호] 형태의 2차원 배열로 작동합니다."
 //    string tempBoard[5] = {
 //        "URLPO",
 //        "XPREA",
@@ -60,6 +62,7 @@ bool hasWord(int y, int x, const string& word) {
 //        "XXXXX"
 //    };
 //
+//    // 배열에 넣은걸 보드로 옳긴다 하나씩
 //    for (int i = 0; i < 5; i++) {
 //        for (int j = 0; j < 5; j++) {
 //            board[i][j] = tempBoard[i][j];

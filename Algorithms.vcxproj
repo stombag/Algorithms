@@ -124,11 +124,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BOARDCOVER.cpp" />
+    <ClCompile Include="clocksync.cpp" />
+    <ClCompile Include="Fence.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="moving_average.cpp" />
     <ClCompile Include="Picnic.cpp" />
+    <ClCompile Include="QuadTree.cpp" />
     <ClCompile Include="recurision.cpp" />
     <ClCompile Include="Boggle.cpp" />
+    <ClCompile Include="Traveling_Sales-man_Problem.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

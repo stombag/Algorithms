@@ -36,6 +36,8 @@ int countPairings(bool taken[10]) {
 	}
 	return ret;
 }
+
+
 //int main() {
 //    int C; // 테스트 케이스의 수
 //    cin >> C;
@@ -43,8 +45,11 @@ int countPairings(bool taken[10]) {
 //    // 3명일 수도 있고 6명일 수도 있고 
 //
 //    while (C--) {
-//        int m; // m: 친구 쌍의 수
-//        cin >> n >> m;
+//        int m; 
+//        // m: 친구 쌍의 수
+//        // n :  학생의 수
+//        cin >> n >> m; 
+//        
 //
 //        // 전역 변수 및 배열 초기화 (테스트 케이스마다 리셋 필수)
 //        memset(areFriends, false, sizeof(areFriends));
@@ -65,3 +70,5 @@ int countPairings(bool taken[10]) {
 //
 //    return 0;
 //}
+
+

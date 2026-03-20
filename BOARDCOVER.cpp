@@ -43,11 +43,14 @@ bool setBoard(vector<vector<int>>& board, int y, int x, int type, int delta) {
 	}
 	return ok;
 }
+
 int cover(vector<vector<int>>& board) {
 	// -1로 해야 못 찾았을때 구분 가능하다
 	int y = -1, x = -1; 
-	// 이중 반복문으로 게임판 정체를 훑는다
+	// 이중 반복문으로 게임판 정체를 훑는다 빈칸이 있는 지 확인 하는 용도이다. 
+	// 찾으면 x,y에 그값을 입력하고 나온다. 
 	for (int i = 0; i < board.size(); ++i) {
+		// 2차원 배열에서 사이즈를 크기를 측정할때 배열이 없으면 세로줄(y), 배열이 있으면 가로줄(x)을 의미한다. 
 		for(int j= 0;j < board[i].size(); ++j)
 			if (board[i][j] == 0) { // 빈칸(0) 발견
 				y = i;
@@ -63,11 +66,14 @@ int cover(vector<vector<int>>& board) {
 	if (y == -1) return 1;
 	// 찾은 방법은 수를 저장할 변수
 	int ret = 0; 
+
+	// 여기서 빈칸으로 이동한 xy기준으로 SetBoared가 true면 ret 값을 증가 시키고 다시 실행한다.
 	for (int type = 0; type < 4; ++type) {
 		// 1차 시도 : set 함수가 true를 반환하면(성공적으로 놓았으면)
 		if (setBoard(board, y, x, type, 1))
 			// 2차 시도 : 나머지 칸들도 채운다
-			// Cover가 반환하는 값을 ret에 더한다.
+			// 재귀로 다시 cover로 함수 안들어 들어간다 끝까지 들어가서 해결을 하면 함수에서 나와 ret에 값을 더한다.
+			// 내가 부른 cover가 자식, 손자, 증손자까지 끝까지 다녀와서 퍼즐을 완성한 횟수(1들의 합)를 전부 들고 오면, 그때 내 지갑(ret)에 더하겠다!`
 			ret += cover(board);
 	
 		// 블록을 다시 치운다
@@ -79,6 +85,7 @@ int cover(vector<vector<int>>& board) {
 	return ret;
 	
 }
+
 //int main() {
 //    // 빠른 입출력을 위한 설정 (선택 사항)
 //    ios_base::sync_with_stdio(false);
@@ -88,18 +95,25 @@ int cover(vector<vector<int>>& board) {
 //    if (!(cin >> C)) return 0;
 //
 //    while (C--) {
+//		// H은 줄 세로
+//		// W은 칸 가로
 //        int H, W;
 //        cin >> H >> W; // 높이와 너비 입력
 //
-//        // 게임판 생성 (0: 빈 칸, 1: 검은 칸/채워진 칸)
+//        // 게임판 생성 (0: 빈 칸, 1: 검은 칸/채워진 칸)\
+//		// 크기가 w(가로)이고 Int 형 데이터를 담는 1차원 벡터를 만들어라
+//		// 이름은 board이고 안에 int형 벡터를 담는 큰 통(2차원 벡터)을 만들어라 
 //        vector<vector<int>> board(H, vector<int>(W));
 //        int whiteCount = 0; // 빈 칸 개수 세기
 //
+//		// 이 반복문은 사용자가 보드를 입력하는 칸을 나타난것이다. 
 //        for (int i = 0; i < H; ++i) {
+//			// 한줄씩 H 만큼 반복시킨다.  
 //            string row;
 //            cin >> row; // 한 줄씩 문자열로 입력 받음 (예: "#..#..")
 //            for (int j = 0; j < W; ++j) {
-//                if (row[j] == '#') {
+//                if (row[j] == '#') { //row에 입력한 값에서 문자열은 배열에서 하나씩 들어간다 그점을 이용해서 로직을 짜고
+//					// true면 board에 1을 넣는다.
 //                    board[i][j] = 1; // '#'은 벽(검은 칸)이므로 1
 //                } else {
 //                    board[i][j] = 0; // '.'은 빈 칸이므로 0
@@ -119,3 +133,5 @@ int cover(vector<vector<int>>& board) {
 //
 //    return 0;
 //}
+
+
