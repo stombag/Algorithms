@@ -57,32 +57,32 @@ int solve(int left, int right) {
 
 }
 
-int main() {
-    // 예시 울타리 높이 배열 (게임 지형 데이터라고 생각해보세요!)
-    // [7, 1, 5, 9, 6, 7, 3]
-    //vector<int> fence = {7, 1, 5, 9, 6, 7, 3};
-
-    //int result = bruteForce(fence);
-
-    //cout << "울타리 높이 데이터: ";
-    //for (int h : fence) cout << h << " ";
-    //cout << endl;
-
-    //cout << "가장 큰 직사각형의 넓이: " << result << endl;
-
-   //return 0;
-	h = {1, 1, 1, 1, 1, 1, 0};
-
-    cout << "--- 분할 정복 알고리즘 실행 ---" << endl;
-    cout << "울타리 데이터: ";
-    for (int val : h) cout << val << " ";
-    cout << endl;
-
-    // 전체 구간(0번 인덱스부터 마지막 인덱스까지)에 대해 실행
-    int result = solve(0, h.size() - 1);
-
-    cout << "최대 직사각형 넓이: " << result << endl;
-
-    return 0;
-
-}
+//int main() {
+//    // 예시 울타리 높이 배열 (게임 지형 데이터라고 생각해보세요!)
+//    // [7, 1, 5, 9, 6, 7, 3]
+//    //vector<int> fence = {7, 1, 5, 9, 6, 7, 3};
+//
+//    //int result = bruteForce(fence);
+//
+//    //cout << "울타리 높이 데이터: ";
+//    //for (int h : fence) cout << h << " ";
+//    //cout << endl;
+//
+//    //cout << "가장 큰 직사각형의 넓이: " << result << endl;
+//
+//   //return 0;
+//	h = {1, 1, 1, 1, 1, 1, 0};
+//
+//    cout << "--- 분할 정복 알고리즘 실행 ---" << endl;
+//    cout << "울타리 데이터: ";
+//    for (int val : h) cout << val << " ";
+//    cout << endl;
+//
+//    // 전체 구간(0번 인덱스부터 마지막 인덱스까지)에 대해 실행
+//    int result = solve(0, h.size() - 1);
+//
+//    cout << "최대 직사각형 넓이: " << result << endl;
+//
+//    return 0;
+//
+//}
