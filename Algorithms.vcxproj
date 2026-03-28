@@ -123,10 +123,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="bino.cpp" />
     <ClCompile Include="BOARDCOVER.cpp" />
     <ClCompile Include="clocksync.cpp" />
     <ClCompile Include="FANMEETING.cpp" />
     <ClCompile Include="Fence.cpp" />
+    <ClCompile Include="JumpGame.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="moving_average.cpp" />
     <ClCompile Include="Picnic.cpp" />
