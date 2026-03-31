@@ -13,15 +13,15 @@ int bino2(int n, int r) {
 
 }
 
-int main() {
-	int n, r;
-
-	cout << "n과 r을 입력하세요:	";
-	cin >> n >> r;
-
-	int result = bino2(n, r);
-
-	cout << n << r << endl;
-	cout<< result << endl;
-	return 0;
-}
+//int main() {
+//	int n, r;
+//
+//	cout << "n과 r을 입력하세요:	";
+//	cin >> n >> r;
+//
+//	int result = bino2(n, r);
+//
+//	cout << n << r << endl;
+//	cout<< result << endl;
+//	return 0;
+//}
