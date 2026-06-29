@@ -54,5 +54,11 @@
     <ClCompile Include="AffineSpacePoint.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="TrianglePath.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="LIS.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
