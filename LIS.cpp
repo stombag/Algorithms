@@ -2,19 +2,31 @@
 #include<vector>
 
 using namespace std;
-//완전 탐색
-int lis_n = 7; 
-int lis_cache[100], S[100] = {1,2,3,5,10,15,20,25};;
 
-int lis3(int start) {
-    int& ret = lis_cache[start + 1];
+const long long NEGINF = numeric_limits<long long> ::min();
+int n, m, A[100], B[100];
+int lis_cache[101][101];
+
+int jlis(int indexA, int indexB)
+{
+    int& ret = lis_cache[indexA + 1][ indexB + 1];
+
     if (ret != -1) return ret;
-    ret = 1;
-    for (int next = start+1; next < lis_n; ++next)
-        if (start == -1 || S[start] < S[next])
-            ret = max(ret,lis3(next) + 1);
+
+    ret = 2;
+    long long a = (indexA == -1 ? NEGINF : A[indexA]);
+    long long b = (indexB == -1 ? NEGINF : B[indexB]);
+    long long maxElenment = max(a, b);
+
+    for (int nextA = indexA + 1; nextA < n; ++nextA)
+        if (maxElenment < A[nextA])
+            ret = max(ret, jlis(nextA, indexB) + 1);
+    for (int nextB = indexB + 1; nextB < m; ++nextB)
+        if (maxElenment < B[nextB])
+            ret = max(ret, jlis(indexA, nextB) + 1);
     return ret;
 }
+
 
 
 int main() {
